@@ -2,12 +2,15 @@ package ConnectHelper.Packages;
 
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
+import java.io.Serial;
 import java.io.Serializable;
 
 /**
  * 此类用于封装一个图片信息和缩略图，序列化后可在App端和PC端之间传输，也可保存在PC端等待读取。
  */
 public class ThumbPackage implements FilePackage, Serializable {
+    @Serial
+    private static final long serialVersionUID = 1L;
     // 文件基本信息
     private final String fileName;        // 文件名（含后缀）
     private final int[] date;             // 修改时间（yyyy, mm, dd）
