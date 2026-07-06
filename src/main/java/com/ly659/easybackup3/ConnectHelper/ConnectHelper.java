@@ -67,7 +67,7 @@ public class ConnectHelper implements Closeable {
         try (ObjectInputStream objectInputStream = new ObjectInputStream(inputStream)) {
             if (objectInputStream.readObject() instanceof HandPackage handPackage) {
                 // 将握手信息写入XML文件
-                return XMLHelper.writeHandInfo(handPackage, new File("src\\ConnectHelper\\Temp"));
+                return XMLHelper.writeHandInfo(handPackage, new File(EasyBackup3_Launcher.tempDir, "HandInfo.xml"));
             }
         } catch (ClassNotFoundException e) {
             LogRecorder.error(e.getMessage());
