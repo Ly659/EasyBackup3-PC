@@ -30,6 +30,14 @@ public class ConnectHelper implements Closeable {
     }
 
     /**
+     * 判断Socket连接和IO流当前是否可用。
+     * @return 是否可用（true为不可用！）
+     */
+    private boolean connectNotAvailable() {
+        return serverSocket.isClosed() || socket.isClosed() || inputStream == null || outputStream == null;
+    }
+
+    /**
      * 阻塞并等待客户端的连接请求，获取通信Socket套接字，并读取握手信息。
      * @throws IOException 等待或尝试连接时发生IO异常
      * @return 握手信息XML文件对象
