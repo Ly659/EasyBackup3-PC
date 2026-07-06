@@ -1,6 +1,6 @@
-package Tools;
+package com.ly659.easybackup3.Tools;
 
-import ConnectHelper.Packages.HandPackage;
+import com.ly659.easybackup3.ConnectHelper.Packages.HandPackage;
 import org.dom4j.Document;
 import org.dom4j.DocumentHelper;
 import org.dom4j.Element;
