@@ -59,8 +59,8 @@ public class ConnectHelper implements Closeable {
      * @throws IOException 读取握手信息、写入XML文件时发生IO异常
      */
     private File handShake() throws IOException {
-        // 若IO流未初始化，直接退出
-        if (inputStream == null || outputStream == null) {
+        // 若连接未建立，直接退出
+        if (connectNotAvailable()) {
             return null;
         }
         // 初始化对象输入流，读取握手封装对象
