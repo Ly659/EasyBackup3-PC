@@ -30,8 +30,7 @@ public class ConnectHelper implements Closeable {
     }
 
     /**
-     * 在新线程中等待客户端的连接请求，获取通信Socket套接字，并读取握手信息。
-     *
+     * 阻塞并等待客户端的连接请求，获取通信Socket套接字，并读取握手信息。
      * @throws IOException 等待或尝试连接时发生IO异常
      * @return 握手信息XML文件对象
      */
