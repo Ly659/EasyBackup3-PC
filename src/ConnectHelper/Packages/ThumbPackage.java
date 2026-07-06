@@ -68,12 +68,21 @@ public class ThumbPackage implements FilePackage, Serializable {
      * <br>注：当该封装未指定缩略图数据时，此方法会返回<code>null</code>。
      * @return 输入流
      */
+    @Deprecated
     public InputStream getInputStream() {
         if (thumb != null) {
             return new ByteArrayInputStream(thumb);
         } else {
             return null;
         }
+    }
+
+    /**
+     * 返回缩略图文件数据。
+     * @return 文件数据（字节数组）
+     */
+    public byte[] getThumb() {
+        return thumb;
     }
 
     /**
