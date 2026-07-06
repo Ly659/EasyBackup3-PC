@@ -1,4 +1,4 @@
-package ConnectHelper.Packages;
+package com.ly659.easybackup3.ConnectHelper.Packages;
 
 /**
  * 此接口用于表示所有用于序列化传输的文件信息封装。

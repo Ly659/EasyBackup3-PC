@@ -1,4 +1,4 @@
-package ConnectHelper.Packages;
+package com.ly659.easybackup3.ConnectHelper.Packages;
 
 import java.io.Serial;
 import java.io.Serializable;
