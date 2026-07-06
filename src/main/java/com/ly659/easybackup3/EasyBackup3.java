@@ -170,7 +170,7 @@ public class EasyBackup3 {
                                 }
                             }
                         } catch (IOException | ClassNotFoundException e) {
-                            throw new RuntimeException(e);
+                            LogRecorder.error(e.getMessage());
                         }
                     }
 
@@ -255,7 +255,7 @@ public class EasyBackup3 {
             try {
                 letsStart();
             } catch (IOException e) {
-                throw new RuntimeException(e);
+                LogRecorder.error(e.getMessage());
             }
         });   // 点击按钮执行letsStart方法
     }
