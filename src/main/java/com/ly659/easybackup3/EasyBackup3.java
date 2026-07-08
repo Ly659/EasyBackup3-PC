@@ -209,14 +209,17 @@ public class EasyBackup3 {
 
     // 程序基础UI界面
     private final Display display;
-    public Shell shell;
+    private final Shell shell;
 
     private final Label welcomeLabel;           // 欢迎文字
     private final Button startButton;           // 开始按钮
 
-    public EasyBackup3(Display display) {
+    // 列表视图
+    private ViewControl viewControl;
+
+    public EasyBackup3(Display display, Shell shell) {
         this.display = display;
-        this.shell = new Shell(display);
+        this.shell = shell;
 
         // UI界面基本设置
         shell.setText("EasyBackup3 - Internal test only");     // 窗口标题

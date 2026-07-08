@@ -4,8 +4,6 @@ import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Shell;
 
 import java.io.File;
-import java.io.IOException;
-import java.nio.file.Files;
 import java.util.Objects;
 
 /**
@@ -14,6 +12,7 @@ import java.util.Objects;
  */
 public class EasyBackup3_Launcher {
     // 基本UI组件
+    public static EasyBackup3 easyBackup3;      // 主程序对象
     public static Display display;
     public static Shell shell;
 
@@ -46,9 +45,10 @@ public class EasyBackup3_Launcher {
         // 给变量赋值
         tempDir = new File(System.getProperty("java.io.tmpdir"));       // 临时目录
 
+        // 初始化程序UI界面
         display = new Display();
-        EasyBackup3 easyBackup3 = new EasyBackup3(display);
-        shell = easyBackup3.shell;
+        shell = new Shell(display);
+        easyBackup3 = new EasyBackup3(display, shell);
 
         // 启动程序UI界面
         easyBackup3.open();
